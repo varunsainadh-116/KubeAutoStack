@@ -7,14 +7,14 @@ module "vpc" {
   azs             = local.azs
   private_subnets = local.private_subnet
   public_subnets  = local.public_subnet
-    intra_subnets   = local.intra_subnet
+  intra_subnets   = local.intra_subnet
 
   enable_nat_gateway = true
   enable_vpn_gateway = true
 
   tags = {
-    Terraform = "true"
+    Terraform   = "true"
     Environment = local.env
-    Name = "${local.name}-vpc"
+    Name        = "${local.name}-vpc"
   }
 }
